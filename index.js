@@ -42,6 +42,7 @@
  buttonElement1.addEventListener('click', function() {
    // Change the code to update the content of a specific DOM element
    titleElement.innerHTML = 'Button Clicked';
+   titleElement.classList.add('button-clicked');
    alert("Button clicked")
  });
  
