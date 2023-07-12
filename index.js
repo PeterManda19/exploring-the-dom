@@ -19,3 +19,29 @@
      alert('Input is empty. Please enter input.');
    }
  });
+
+ // Get a reference to a specific DOM element
+ const titleElement = document.querySelector('#title');
+    
+ // Use console.log to verify DOM element reference
+ console.log(titleElement);
+ 
+ // Get references to multiple DOM elements
+ const buttonElement1 = document.querySelector('#myButton1');
+ const messageElement = document.querySelector('#message');
+ 
+ // Display a value in a DOM element using innerHTML
+ titleElement.innerHTML = 'Updated Title';
+ 
+ // Use setTimeout to delay showing a message in the DOM
+ setTimeout(function() {
+   messageElement.innerHTML = 'Delayed Message';
+ }, 3000);
+ 
+ // Add an event listener to a button
+ buttonElement1.addEventListener('click', function() {
+   // Change the code to update the content of a specific DOM element
+   titleElement.innerHTML = 'Button Clicked';
+   alert("Button clicked")
+ });
+ 
