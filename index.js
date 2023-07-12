@@ -49,6 +49,10 @@ buttonElement1.addEventListener('click', function() {
 // Define an array of fruits
 const fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
 
+// Get DOM references to the input and button elements
+const fruitInput = document.getElementById('fruitInput');
+const addButton = document.getElementById('addButton')
+
 // Get a DOM reference to the ul element
 const ulElement = document.querySelector('.fruits');
 
@@ -63,5 +67,21 @@ fruits.forEach(fruit => {
   // Append the list item to the unordered list (ul)
   ulElement.appendChild(liElement);
 });
- 
 
+// Add a click event listener to the button
+addButton.addEventListener('click', function() {
+// Get the value entered in the input element
+const newFruit = fruitInput.value;
+
+// Create a new list item (li) element for the entered fruit
+const liElement = document.createElement('li');
+
+// Set the text content of the list item to the entered fruit
+liElement.textContent = newFruit;
+
+// Append the new list item to the unordered list (ul)
+ulElement.appendChild(liElement);
+
+// Clear the input field
+fruitInput.value = '';
+});
